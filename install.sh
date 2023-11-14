@@ -27,13 +27,13 @@ mkdir -p $HOME/.config
 
 curl -sL --create-dirs https://git.sr.ht/~yerinalexey/miniplug/blob/master/miniplug.zsh -o $HOME/.zsh/plugins/miniplug.zsh
 
-wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkitmain/vps/config-scripts/dotfiles/.zshrc -q -O $HOME/.zshrc
+wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkit/main/vps/config-scripts/dotfiles/.zshrc -q -O $HOME/.zshrc
 
-wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkitmain/vps/config-scripts/dotfiles/.zprofile -q -O $HOME/.zprofile
+wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkit/main/vps/config-scripts/dotfiles/.zprofile -q -O $HOME/.zprofile
 
-wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkitmain/vps/config-scripts/2-bounty.sh -q -O $HOME/.zsh/bounty.sh
+wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkit/main/vps/config-scripts/2-bounty.sh -q -O $HOME/.zsh/bounty.sh
 
-wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkitmain/vps/config-scripts/dotfiles/.tmux.conf -q -O $HOME/.tmux.conf
+wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkit/main/vps/config-scripts/dotfiles/.tmux.conf -q -O $HOME/.tmux.conf
 
 wget https://raw.githubusercontent.com/alexrf45/bug-bounty-toolkit/main/vps/config-scripts/dotfiles/starship.toml -q -O $HOME/.config/starship.toml
 
