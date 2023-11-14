@@ -37,7 +37,7 @@ provider "aws" {
 }
 
 module "vps" {
-  source = "../../modules/vps"
+  source = "../modules/server/"
 
   instance_type = "m5ad.large"
   key_name      = "bounty"

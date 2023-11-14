@@ -16,10 +16,6 @@ bindkey -v
 #source aliases and env
 source "$HOME/.zprofile"
 
-for file in $HOME/.zsh/*.zsh; do
-    source "$file"
-done
-
 fpath=(/tmp/zsh-completions/src $fpath)
 
 source "$HOME/.zsh/bounty.sh"
@@ -46,3 +42,9 @@ autoload -Uz compinit && compinit
 
 complete -C '/usr/local/bin/aws_completer' aws
 
+alias reload='. ~/.zshrc'
+alias i='sudo apt-get install -y'
+alias update='sudo apt-get update -y'
+alias upgrade='sudo apt-get upgrade -y'
+alias httpserver='suod python3 -m http.server 80'
+alias t='tmux new -f ~/.tmux.conf -s $1'
