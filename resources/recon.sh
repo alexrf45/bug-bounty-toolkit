@@ -92,5 +92,5 @@ tool_banner "links and secrets search complete"
 tool_banner "Running hakrawler"
 cat $project-targets.txt | hakrawler \
 	-h "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36;;X-Bug-Bounty: r0land" \
-	-d 4 -t 20 -timeout 5 -u >$project-endpoints.txt
+	-d 5 -dr -t 50 -timeout 2 -u -subs -w >$project-endpoints.txt
 tool_banner "Recon on $project Finished"
