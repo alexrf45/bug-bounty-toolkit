@@ -10,7 +10,7 @@ bounty $1 () {
     mkdir -p $1/{recon,www,exploit,pivot,report} && cd $1 && \
     mkdir .bounty-logs \
     && docker run --name $1 -it \
-    --net=host --entrypoint=/bin/zsh \
+    --net=host --entrypoint=/bin/bash \
 		--cap-add=NET_ADMIN \
     -e DISPLAY=$DISPLAY -e DOMAIN=$DOMAIN \
 		-e TARGET=$TARGET -e IP=$IP -e TZ=$TIME_ZONE -e NAME=$1 \
@@ -20,7 +20,7 @@ bounty $1 () {
     -w /$1 fonalex45/bounty-sec:latest
 	else
 		docker run --name $1 -it \
-		--net=host --entrypoint=/bin/zsh \
+		--net=host --entrypoint=/bin/bash \
 		--cap-add=NET_ADMIN \
 		-e DOMAIN=$DOMAIN -e DISPLAY=$DISPLAY \
     -e TARGET=$TARGET -e IP=$IP \
@@ -33,12 +33,12 @@ bounty $1 () {
 
 bounty-start $1 ()
 {
- docker container start $1 && docker container exec -it $1 /bin/zsh
+ docker container start $1 && docker container exec -it $1 /bin/bash
 }
 
 bounty-enter $1 ()
 {
-docker exec -it $1 /bin/zsh
+docker exec -it $1 /bin/bash
 }
 
 bounty-stop $1 () {
