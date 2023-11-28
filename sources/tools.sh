@@ -17,6 +17,13 @@ install_go() {
 		rm go1.21.3.linux-amd64.tar.gz
 }
 
+anew_install() {
+    wget https://github.com/tomnomnom/anew/releases/download/v0.1.1/anew-linux-amd64-0.1.1.tgz \
+        -O anew.tgz && tar -xzf anew.tgz && chmod +x anew \
+        && mv anew $HOME/.local/bin/anew && rm anew.tgz
+}
+
+
 httprobe_install() {
 	wget -q https://github.com/tomnomnom/httprobe/releases/download/v0.2/httprobe-linux-amd64-0.2.tgz -O httprobe.tgz &&
 		tar -xzf httprobe.tgz && chmod +x httprobe && mv httprobe $HOME/.local/bin/httprobe && rm httprobe.tgz
@@ -90,6 +97,7 @@ notify_install() {
 sudo apt-get install amass -y
 
 httprobe_install
+anew_install
 httpx_install
 go-dorks_install
 rush_install
