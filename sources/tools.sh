@@ -89,6 +89,7 @@ notify_install() {
 
 sudo apt-get install amass -y
 
+install_go
 httprobe_install
 httpx_install
 go-dorks_install
