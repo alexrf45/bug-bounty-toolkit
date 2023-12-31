@@ -8,7 +8,7 @@ LABEL "website"="https://f0nzy.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install sudo
+RUN apt-get update && apt-get install -y sudo
 
 RUN groupadd --gid 1000 bounty \
   && useradd --home-dir /home/bounty --create-home --uid 1000 \
